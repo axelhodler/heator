@@ -1,4 +1,6 @@
-#
+# Draw heatmaps on maps using R and Stamen and a bunch of coordinates
+
+Based on [Spatial Heat Map Plotting Using R](http://trucvietle.me/r/tutorial/2017/01/18/spatial-heat-map-plotting-using-r.html)
 
 ## Setup macos
 
