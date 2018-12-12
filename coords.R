@@ -3,8 +3,8 @@ library(ggmap)
 library(RColorBrewer)
 
 coords.data <- read.csv(file="./coords.csv")
-europe <- c(left = -170, bottom = -80, right = 170, top = 80)
-coords.map <- get_stamenmap(europe, zoom = 1, maptype = "toner-lite")
+map_bounds <- c(left = -170, bottom = -80, right = 170, top = 80)
+coords.map <- get_stamenmap(map_bounds, zoom = 1, maptype = "toner-lite")
 coords.map <- ggmap(coords.map, extent="device", legend="none")
 ## heat map layer: Polygons with fill color based on relative frequency of events
 coords.map <- coords.map + stat_density2d(data=coords.data, aes(x=Longitude, y=Latitude, fill=..level.., alpha=..level..), geom="polygon")
